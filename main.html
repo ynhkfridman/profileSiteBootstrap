@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+    <!-- #myFirstP , #proPic{
+           float:left;
+       }
+
+       @font-face {
+            font-family: 'dana_yad_alefalefalefnormal';
+            src: url('css/danayadalefalefalef-normal-webfont.eot');
+            src: url('css/danayadalefalefalef-normal-webfont.eot?#iefix') format('embedded-opentype'),
+            url('css/danayadalefalefalef-normal-webfont.woff2') format('woff2'),
+            url('css/danayadalefalefalef-normal-webfont.woff') format('woff'),
+            url('css/danayadalefalefalef-normal-webfont.ttf') format('truetype'),
+            url('css/danayadalefalefalef-normal-webfont.svg#dana_yad_alefalefalefnormal') format('svg');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+        #nttLogo{
+            height: 100px;
+            width: 100px;
+        }
+        #websiteTitle{
+            font-size: 10em;
+            vertical-align: middle;
+            font-family: 'Pacifico', cursive;
+            padding-left: 15px;
+            color: #191970;
+        }
+        #websiteSlogan{
+            font-size: 5.4em;
+        }
+
+        -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css " integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO " crossorigin="anonymous ">
+
+
+    <title dir="rtl">יהודה המלך</title>
+
+    <!-- Use downloaded version of Bootstrap. You can style everything here to your liking. -->
+    <!-- Download the Bootstrap source code here
+    http://getbootstrap.com/getting-started/ -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+
+
+
+        @font-face {
+            font-family: 'ts_matkabold';
+            src: url('css/tsmatka-bold-webfont.eot');
+            src: url('css/tsmatka-bold-webfont.eot?#iefix') format('embedded-opentype'),
+            url('css/tsmatka-bold-webfont.woff2') format('woff2'),
+            url('css/tsmatka-bold-webfont.woff') format('woff'),
+            url('css/tsmatka-bold-webfont.ttf') format('truetype'),
+            url('css/tsmatka-bold-webfont.svg#ts_matkabold') format('svg');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+        h4 {
+
+            font-family:'ts_matkabold';
+            font-size: 6em;
+            vertical-align: middle;
+            font-weight: 900;
+        }
+        p{
+            font-family:'ts_matkabold';
+            font-size: 4em;
+            vertical-align: middle;
+
+        }
+        .text-block {
+            position: absolute;
+
+        }
+        .img-div { height:40%; width:40%; margin-left: 10px;}
+        img {
+            max-width:120%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        body {
+            font-size: 62.5%;
+            font-family: arial, sans-serif;
+            background-image: url('city-night.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* Carousel Styling */
+
+        .carousel .item {
+            height: 800px;
+        }
+
+        .item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 800px;
+        }
+        .slide1{
+            background-image: url('lines.jpg');
+            height: 800px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .slide2{
+            background-image: url('Evolution.jpg');
+            height: 800px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .slide3{
+            background-image: url('lines.jpg');
+            height: 800px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .carousel-caption h1{
+            font-size: 18em;
+            font-family: 'Pacifico', cursive;
+            padding-bottom: .4em;
+        }
+        .carousel-caption p{
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+<!--
+<div class="container">
+  <div class="jumbotron">
+  <img src="ntt-logo.png" id="nttLogo" alt="New Think Tank Logo">
+  <span id="websiteTitle">New Think Tank</span>
+  <p id="websiteSlogan">Video Tutorials on just about Anything</p>
+  </div>
+</div>
+-->
+
+<!-- Carousel -->
+<!-- Surround everything with a div with the class carousel slide -->
+<div id="theCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Define how many slides to put in the carousel -->
+    <ol class="carousel-indicators">
+        <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+        <li data-target="#theCarousel" data-slide-to="1"> </li>
+    </ol >
+
+    <!-- Define the text to place over the image -->
+    <div class="carousel-inner">
+        <div class="item active" >
+            <div class ="slide1"></div>
+            <div class="carousel-caption">
+                <h1>Yehuda Fridman</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slide2"></div>
+            <div class="carousel-caption">
+                <h1>A developer</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Set the actions to take when the arrows are clicked -->
+    <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"> </span>
+    </a>
+    <a class="right carousel-control" href="#theCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+
+
+<div class="jumbotron" style="margin-bottom:50em;">
+    <img dir="ltr" src="yuda.png" class="proPic  col-lg-5 col-md-5 col-sm-5 col-xs-5">
+    <!-- col means column, md >=992px (Also use xs, sm and lg), and the 3 represents the size of the column
+    3 * 4 = 12 (A 6 column layout would use 2 if they had equal size) -->
+    <div dir="rtl" class="row col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5">
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+            <h4>קצת עליי</h4><p>
+
+
+            אהלן ! אני יהודה בוגר תואר במתמטיקה ומדעי המחשב בהצטיינות ,אוהב מחשבים פופקורן ספרים וריצות .
+
+        </p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <h4>על האתר</h4><p>
+
+
+את האתר בניתי תוך על מנת ללמוד להתעסק ב<span dir="ltr">java script \ css \ html</span> שפות שיצא לי רק לשמוע עליהן עד היום
+
+        </p>
+        </div>
+        <!-- When in sm mode the 3rd column jumps up below the 2nd column. To fix it put the following right before the column that messes up using the screen mode being sm that messes up. -->
+        <div class="clearfix visible-sm"></div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <h4>על מטרתי</h4><p>
+
+
+        אוהב ללמוד - במהלך בניית האתר התנסתי ב <span dir="ltr">java script \ css \ html \ jQuery \ sass \ Bootstrap</span> כמו כן למדתי בעבר  <span dir="ltr">c \ cpp \ java \ Spring \ SQL \ MySQL</span>
+
+        </p>
+        </div>
+    </div>
+
+</div>
+<div class="jumbotron" style="margin-bottom:50em;">
+
+
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Use downloaded version of Bootstrap -->
+<script src="js/bootstrap.js"></script>
+
+<script>
+    $('.carousel').carousel({
+        interval: 7000
+
+    });
+</script>
+</body>
+</html>
