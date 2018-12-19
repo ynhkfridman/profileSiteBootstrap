@@ -89,10 +89,32 @@
         body {
             font-size: 62.5%;
             font-family: arial, sans-serif;
-            background-image: url('city-night.png');
+            background-image: url('city-night.jpg');
+
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
+        }
+        img.bg {
+            /* Set rules to fill background */
+            min-height: 100%;
+            min-width: 1024px;
+
+            /* Set up proportionate scaling */
+            width: 100%;
+            height: auto;
+
+            /* Set up positioning */
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        @media screen and (max-width: 1024px) { /* Specific to this particular image */
+            img.bg {
+                left: 50%;
+                margin-left: -512px;   /* 50% */
+            }
         }
         .btn {
             background-color: DodgerBlue;
@@ -108,47 +130,41 @@
         /* Carousel Styling */
 
         .carousel .item {
-            height: 800px;
+            height: 15vw;
         }
 
         .item img {
             position: absolute;
             top: 0;
             left: 0;
-            min-height: 800px;
+            min-height: 350px;
         }
         .slide1{
             background-image: url('lines.jpg');
-            height: 800px;
+            height: 500px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
         }
         .slide2{
             background-image: url('Evolution.jpg');
-            height: 800px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-        .slide3{
-            background-image: url('lines.jpg');
-            height: 800px;
+            height: 750px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
         }
         .carousel-caption h1{
-            font-size: 18em;
+            position: absolute;
+            bottom: 0;
+            right: 19vw;
             font-family: 'Pacifico', cursive;
-            padding-bottom: .4em;
+            font-size: 4vw;
         }
-        .carousel-caption p{
-            font-size: 2em;
-        }
+
     </style>
 </head>
 <body>
+
 <!--
 <div class="container">
   <div class="jumbotron">
@@ -164,10 +180,10 @@
 <div id="theCarousel" class="carousel slide" data-ride="carousel">
 
     <!-- Define how many slides to put in the carousel -->
-    <ol class="carousel-indicators">
-        <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
-        <li data-target="#theCarousel" data-slide-to="1"> </li>
-    </ol >
+    <!-- <ol class="carousel-indicators">
+         <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+         <li data-target="#theCarousel" data-slide-to="1"> </li>
+     </ol >-->
 
     <!-- Define the text to place over the image -->
     <div class="carousel-inner">
@@ -196,47 +212,54 @@
 
 
 
-<div class="jumbotron" style="margin-bottom:50em;">
-    <img dir="ltr" src="yuda.png" class="proPic  col-lg-5 col-md-5 col-sm-5 col-xs-5">
+<div class="jumbotron" style="margin-bottom:20em;">
+    <div class="row">
+        <img dir="ltr" src="yuda.png" class="proPic  col-lg-5 col-md-5 col-sm-5 col-xs-5">
+
     <!-- col means column, md >=992px (Also use xs, sm and lg), and the 3 represents the size of the column
     3 * 4 = 12 (A 6 column layout would use 2 if they had equal size) -->
-    <div dir="rtl" class="row col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5">
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div dir="rtl" class="col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5">
 
-            <h4>קצת עליי</h4><p>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 
-
-            אהלן ! אני יהודה בוגר תואר במתמטיקה ומדעי המחשב בהצטיינות ,אוהב מחשבים פופקורן ספרים וריצות .
-
-        </p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <h4>על האתר</h4><p>
+                <h4>קצת עליי</h4><p>
 
 
-את האתר בניתי תוך על מנת ללמוד להתעסק ב<span dir="ltr">java script \ css \ html</span> שפות שיצא לי רק לשמוע עליהן עד היום
+                אהלן ! אני יהודה בוגר תואר במתמטיקה ומדעי המחשב בהצטיינות ,אוהב מחשבים פופקורן ספרים וריצות .
 
-        </p>
-        </div>
-        <!-- When in sm mode the 3rd column jumps up below the 2nd column. To fix it put the following right before the column that messes up using the screen mode being sm that messes up. -->
-        <div class="clearfix visible-sm"></div>
-
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <h4>על מטרתי</h4><p>
+            </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <h4>על האתר</h4><p>
 
 
-        אוהב ללמוד - במהלך בניית האתר התנסתי ב <span dir="ltr">java script \ css \ html \ jQuery \ sass \ Bootstrap</span> כמו כן למדתי בעבר  <span dir="ltr">c \ cpp \ java \ Spring \ SQL \ MySQL</span>
+                את האתר בניתי תוך על מנת ללמוד להתעסק ב<span dir="ltr">java script \ css \ html</span> שפות שיצא לי רק לשמוע עליהן עד היום
 
-        </p>
+            </p>
+            </div>
+            <!-- When in sm mode the 3rd column jumps up below the 2nd column. To fix it put the following right before the column that messes up using the screen mode being sm that messes up. -->
+            <div class="clearfix visible-sm"></div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h4>על מטרתי</h4><p>
+
+
+                אוהב ללמוד - במהלך בניית האתר התנסתי ב <span dir="ltr">java script \ css \ html \ jQuery \ sass \ Bootstrap</span> כמו כן למדתי בעבר  <span dir="ltr">c \ cpp \ java \ Spring \ SQL \ MySQL</span>
+
+            </p>
+            </div>
         </div>
     </div>
-
 </div>
-<div class="jumbotron" style="margin-bottom:50em;">
-    <a href="./files/Yehuda%20Fridman%20-%20Resume.pdf" download="Yehuda Fridman resume">
-    <button style="" class="btn"><i class="fa fa-download"></i> Download</button>
-    </a>
+<div class="jumbotron" style="margin-bottom:20em; padding: 5px">
+
+    <div class="row col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+        <a href="./files/Yehuda%20Fridman%20-%20Resume.pdf" download="Yehuda Fridman resume">
+
+            <button  class="btn "><i class="fa fa-download"></i> Download CV</button>
+        </a>
+    </div>
 </div>
 
 
